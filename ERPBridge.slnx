@@ -3,8 +3,8 @@
   <Folder Name="/samples/" />
   <Folder Name="/sdk/" />
   <Folder Name="/simulators/">
-    <Project Path="simulators/TigerSimulator/TigerSimulator.csproj" />
-    <Project Path="simulators/TrendyolSimulator/TrendyolSimulator.csproj" Id="0318b769-7008-49df-8234-07df902800c1" />
+    <Project Path="simulators/ErpSimulator/ErpSimulator.csproj" DisplayName="ErpSimulator" />
+    <Project Path="simulators/MarketplaceSimulator/MarketplaceSimulator.csproj" Id="0318b769-7008-49df-8234-07df902800c1" />
   </Folder>
   <Folder Name="/src/">
     <Project Path="src/ERPBridge.Api/ERPBridge.Api.csproj" Id="95fdb1ca-c6a3-477f-8317-f752ff9c5dcd" />
