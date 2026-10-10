@@ -1,0 +1,6 @@
+@ERPBridge.Api_HostAddress = http://localhost:5230
+
+GET {{ERPBridge.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

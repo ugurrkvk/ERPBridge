@@ -1,1 +1,16 @@
-<Solution />
+<Solution>
+  <Folder Name="/docs/" />
+  <Folder Name="/samples/" />
+  <Folder Name="/sdk/" />
+  <Folder Name="/simulators/">
+    <Project Path="simulators/TigerSimulator/TigerSimulator.csproj" />
+    <Project Path="simulators/TrendyolSimulator/TrendyolSimulator.csproj" Id="0318b769-7008-49df-8234-07df902800c1" />
+  </Folder>
+  <Folder Name="/src/">
+    <Project Path="src/ERPBridge.Api/ERPBridge.Api.csproj" Id="95fdb1ca-c6a3-477f-8317-f752ff9c5dcd" />
+    <Project Path="src/ERPBridge.Application/ERPBridge.Application.csproj" Id="67fa2c01-4927-4960-ad92-faaf6adaf1ed" />
+    <Project Path="src/ERPBridge.Domain/ERPBridge.Domain.csproj" Id="af940ec1-0b5e-4dd4-a87f-8da2fd6b308f" />
+    <Project Path="src/ERPBridge.Infrastructure/ERPBridge.Infrastructure.csproj" Id="2149e687-431d-4b40-b5c0-ec3f49a5a145" />
+  </Folder>
+  <Folder Name="/tests/" />
+</Solution>

@@ -1,0 +1,16 @@
+@TrendyolSimulator_HostAddress = http://localhost:5150
+
+GET {{TrendyolSimulator_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+
+@TrendyolSimulator_HostAddress = https://localhost:7270
+
+### Örnek satıcının siparişleri
+GET {{TrendyolSimulator_HostAddress}}/api/v1/sellers/SELLER-001/orders
+Accept: application/json
+
+### Siparişi olmayan satıcı
+GET {{TrendyolSimulator_HostAddress}}/api/v1/sellers/SELLER-002/orders
+Accept: application/json

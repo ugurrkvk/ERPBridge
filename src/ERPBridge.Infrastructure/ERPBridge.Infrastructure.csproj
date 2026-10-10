@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ERPBridge.Application\ERPBridge.Application.csproj" />
+    <ProjectReference Include="..\ERPBridge.Domain\ERPBridge.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

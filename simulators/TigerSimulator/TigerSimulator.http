@@ -1,0 +1,52 @@
+@TigerSimulator_HostAddress = http://localhost:5237
+
+GET {{TigerSimulator_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+
+### ERP envanterini SOAP üzerinden sorgula
+POST https://localhost:7205/soap/erp.svc
+Content-Type: text/xml; charset=utf-8
+SOAPAction: "urn:tiger-simulator:erp:v1/TigerErpService/GetInventory"
+
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Body>
+    <GetInventory xmlns="urn:tiger-simulator:erp:v1" />
+  </soap:Body>
+</soap:Envelope>
+
+### ERP'de satış siparişi oluştur
+POST https://localhost:7205/soap/erp.svc
+Content-Type: text/xml; charset=utf-8
+SOAPAction: "urn:tiger-simulator:erp:v1/TigerErpService/CreateSalesOrder"
+
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Body>
+    <CreateSalesOrder xmlns="urn:tiger-simulator:erp:v1">
+      <request>
+        <CustomerCode>CARI-001</CustomerCode>
+        <OrderDateUtc>2026-10-07T11:00:00Z</OrderDateUtc>
+        <SourceSystem>Trendyol</SourceSystem>
+        <SourceSellerId>SELLER-001</SourceSellerId>
+        <ExternalOrderId>TY-DEMO-1003</ExternalOrderId>
+        <Lines>
+          <CreateSalesOrderLineRequest>
+            <ItemCode>MOUSE-001</ItemCode>
+            <Quantity>1</Quantity>
+            <UnitPrice>750</UnitPrice>
+          </CreateSalesOrderLineRequest>
+        </Lines>
+        <Lines>
+          <CreateSalesOrderLineRequest>
+            <ItemCode>OLMAYAN-001</ItemCode>
+            <Quantity>1</Quantity>
+            <UnitPrice>750</UnitPrice>
+          </CreateSalesOrderLineRequest>
+        </Lines>
+      </request>
+    </CreateSalesOrder>
+  </soap:Body>
+</soap:Envelope>
