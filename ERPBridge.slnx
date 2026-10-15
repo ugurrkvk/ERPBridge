@@ -12,5 +12,7 @@
     <Project Path="src/ERPBridge.Domain/ERPBridge.Domain.csproj" Id="af940ec1-0b5e-4dd4-a87f-8da2fd6b308f" />
     <Project Path="src/ERPBridge.Infrastructure/ERPBridge.Infrastructure.csproj" Id="2149e687-431d-4b40-b5c0-ec3f49a5a145" />
   </Folder>
-  <Folder Name="/tests/" />
+  <Folder Name="/tests/">
+    <Project Path="tests/ERPBridge.Domain.Tests/ERPBridge.Domain.Tests.csproj" />
+  </Folder>
 </Solution>
